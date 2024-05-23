@@ -1,11 +1,15 @@
 import './App.css'
-import IndexPage from './components/PhoneBook/IndexPage'
+import Calculator from './components/Calculator/Calculator'
+import IndexPage from './components/PhoneBook(Static)/IndexPage'
+import TicTacToe from './components/TicTacToe/TicTacToe'
 
 function App() {
 
   return (
     <>
-      <IndexPage />
+      {/* <IndexPage /> */}
+      {/* <Calculator /> */}
+      {/* <TicTacToe /> */}
     </>
   )
 }
