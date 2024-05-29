@@ -1,7 +1,8 @@
 import ContactCard from "./ContactCard";
 import React, { useState, useEffect } from "react";
+import "./App.css"
 
-const IndexPage = () => {
+const IndexPageStatic = () => {
   const phoneBook = [{name: "Muhammad Fuaad", number: "03344277542"}]
   const [contacts, setContacts] = useState(phoneBook);
 
@@ -107,14 +108,16 @@ const IndexPage = () => {
             <div className="App">
               <h2 className="header">Phone Book</h2>
               <div className="flex">
-                <button className="btn btn-primary">
-                  <span
-                    onClick={() => setShowForm(!showForm)}
-                  >
-                    {showForm ? "Hide Contact Form" : "Create New Contact"}
-                  </span>
-                </button>
-                <button onClick={()=>handleDisplayStarred()} className="btn btn-danger">{!displayStarred ? "Favourite Contacts" : "All Contacts"}</button>
+                <div className="flex">
+                  <button className="btn btn-primary">
+                    <span
+                      onClick={() => setShowForm(!showForm)}
+                    >
+                      {showForm ? "Hide Contact Form" : "Create New Contact"}
+                    </span>
+                  </button>
+                  <button onClick={()=>handleDisplayStarred()} className="btn btn-danger">{!displayStarred ? "Favourite Contacts" : "All Contacts"}</button>
+                </div>
               </div>
 
               {showForm && (
@@ -173,4 +176,4 @@ const IndexPage = () => {
 
 }
 
-export default IndexPage
+export default IndexPageStatic

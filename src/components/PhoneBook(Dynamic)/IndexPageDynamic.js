@@ -2,7 +2,7 @@ import ContactCard from "./ContactCard";
 import {axios} from "@bundled-es-modules/axios";
 import React, { useState, useEffect } from "react";
 
-const IndexPage = () => {
+const IndexPageDynamic = () => {
   const [contacts, setContacts] = useState([]);
 
     const fetchData = async () => {
@@ -190,4 +190,4 @@ const IndexPage = () => {
 
 }
 
-export default IndexPage
+export default IndexPageDynamic
