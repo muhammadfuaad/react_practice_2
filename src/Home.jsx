@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function Home() {
   return(
     <>
-      <h1 className="">Welcome To My Portfolio Website</h1>
+      <h1 className="font-bold">Welcome To My Portfolio Website</h1>
 
       <div><Link to="/calculator">Calculator</Link></div>
       <div className=""><Link to="/phonebook">Phonebook App</Link></div>
