@@ -1,21 +1,22 @@
-import './App.css'
-import Calculator from './components/Calculator/Calculator'
-import { Counter } from './components/Counter/Counter'
-import IndexPageStatic from './components/PhoneBook(Static)/IndexPageStatic'
-import IndexPage from './components/PhoneBook(Static)/IndexPageStatic'
-import TicTacToe from './components/TicTacToe/TicTacToe'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.css';
+import Calculator from './components/Calculator/Calculator';
+import { Counter } from './components/Counter/Counter';
+import IndexPageStatic from './components/PhoneBook(Static)/IndexPageStatic';
+import TicTacToe from './components/TicTacToe/TicTacToe';
 
 function App() {
-
   return (
-    <>
-      {/* <IndexPageStatic /> */}
-      <IndexPageStatic />
-      {/* <Calculator /> */}
-      {/* <TicTacToe /> */}
-      <Counter />
-    </>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<IndexPageStatic />} />
+        <Route path="/calculator" element={<Calculator />} />
+        <Route path="/counter" element={<Counter />} />
+        <Route path="/tic-tac-toe" element={<TicTacToe />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
