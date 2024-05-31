@@ -1,11 +1,10 @@
-import { createContext, useRef, useState } from "react"
-import ChildA from "./ChildA"
+import { createContext } from "react"
 const data = createContext()
 const data1 = createContext()
 
 function ContextApi() {
     
-  let myName = "Muhammad Fuaad"
+  let myName = "Muhammad Fuaad Usman"
   let myGender = "male"
     return (
       <data1.Provider value={myGender}>
@@ -14,9 +13,45 @@ function ContextApi() {
         </data.Provider>
       </data1.Provider>
     )
-  }
-  
+}
+
+function ChildA() {
+  return (
+    <>
+      <ChildB />
+    </>
+  )
+}
+
+function ChildB() {
+  return (
+    <>
+      <ChildC />
+    </>
+  )
+}
+
+function ChildC(myName, myGender) {
+  // console.log("data:", dataConsumer);
+  // console.log("data1:", data1);
+
+  return (
+    <data1.Consumer>{(myGender) => {
+      return (
+        <data.Consumer>
+        {
+          (myName) => {
+            return (
+              <h1>My name is {myName} and my gender is {myGender}.</h1>
+            )
+          }
+        }
+        </data.Consumer> 
+      )}}
+    </data1.Consumer> 
+  )
+}
   
   export default ContextApi
-  export {data, data1}
+  // export {data, data1}
   

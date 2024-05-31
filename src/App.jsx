@@ -8,6 +8,7 @@ import TicTacToe from './components/TicTacToe/TicTacToe';
 import Home from './Home';
 import Form from './components/Form';
 import UseContext from './components/hooks/UseContext';
+import ContextApi from './components/hooks/ContextAPI/ContextApi';
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
         <Route path="/tic-tac-toe" element={<TicTacToe />} />
         <Route path="/form" element={<Form />} />
         <Route path="/use_context" element={<UseContext />} />
+        <Route path="/context_api" element={<ContextApi />} />
+
       </Routes>
     </Router>
   );
