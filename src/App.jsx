@@ -7,6 +7,7 @@ import IndexPageStatic from './components/PhoneBook(Static)/IndexPageStatic';
 import TicTacToe from './components/TicTacToe/TicTacToe';
 import Home from './Home';
 import Form from './components/Form';
+import UseContext from './components/hooks/UseContext';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         <Route path="/counter" element={<Counter />} />
         <Route path="/tic-tac-toe" element={<TicTacToe />} />
         <Route path="/form" element={<Form />} />
-
+        <Route path="/use_context" element={<UseContext />} />
       </Routes>
     </Router>
   );
