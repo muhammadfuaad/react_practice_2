@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
-const SimpleForm = () => {
-  const [formData, setFormData] = useState({
+const Form = () => {
+  const [usersData, setUsersData] =useState([])
+  const [userData, setUserData] = useState({
     name: '',
     email: '',
     password: ''
@@ -9,15 +10,25 @@ const SimpleForm = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
+    setUserData({
+      ...userData,
       [name]: value
     });
+    console.log("userData:", userData);
+    // setUsersData([...usersData, userData])
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form Data Submitted:', formData);
+    setUsersData([...usersData, userData])
+    setUserData({
+      name: '',
+      email: '',
+      password: ''
+    });
+    console.log('userData:', userData);
+    console.log('usersData:', usersData);
+
   };
 
   return (
@@ -28,7 +39,7 @@ const SimpleForm = () => {
           type="text"
           id="name"
           name="name"
-          value={formData.name}
+          value={userData.name}
           onChange={handleChange}
           required
         />
@@ -39,7 +50,7 @@ const SimpleForm = () => {
           type="email"
           id="email"
           name="email"
-          value={formData.email}
+          value={userData.email}
           onChange={handleChange}
           required
         />
@@ -50,7 +61,7 @@ const SimpleForm = () => {
           type="password"
           id="password"
           name="password"
-          value={formData.password}
+          value={userData.password}
           onChange={handleChange}
           required
         />
@@ -60,4 +71,4 @@ const SimpleForm = () => {
   );
 };
 
-export default SimpleForm;
+export default Form;

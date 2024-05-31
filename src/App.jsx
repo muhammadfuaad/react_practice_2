@@ -6,7 +6,7 @@ import { Counter } from './components/Counter/Counter';
 import IndexPageStatic from './components/PhoneBook(Static)/IndexPageStatic';
 import TicTacToe from './components/TicTacToe/TicTacToe';
 import Home from './Home';
-import SimpleForm from './components/SimpleForm';
+import Form from './components/Form';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
         <Route path="/calculator" element={<Calculator />} />
         <Route path="/counter" element={<Counter />} />
         <Route path="/tic-tac-toe" element={<TicTacToe />} />
-        <Route path="/form" element={<SimpleForm />} />
+        <Route path="/form" element={<Form />} />
 
       </Routes>
     </Router>
