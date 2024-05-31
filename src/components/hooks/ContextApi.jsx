@@ -32,9 +32,7 @@ function ChildB() {
 }
 
 function ChildC(myName, myGender) {
-  // console.log("data:", dataConsumer);
-  // console.log("data1:", data1);
-
+ 
   return (
     <data1.Consumer>{(myGender) => {
       return (
@@ -53,5 +51,4 @@ function ChildC(myName, myGender) {
 }
   
   export default ContextApi
-  // export {data, data1}
   
