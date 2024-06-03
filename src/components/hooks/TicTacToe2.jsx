@@ -1,9 +1,10 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
-function TicTacToe2(params) {
+function TicTacToe2() {
 
   const [state, setState]  = useState(Array(9).fill(null))
   const [firstPlayersTurn, setFirstPlayersTurn] = useState(true)
+  const [winner, setWinner] = useState(null)
   const handleClick = (index) => {
     // console.log(index);
     const newState = [...state];
@@ -17,21 +18,25 @@ function TicTacToe2(params) {
   
     for(let logic of winnerLogic) {
         const [a,b,c]=logic
-        if(state[a] !== null && state[a] === state[b] && state[b] === state[c]) {
+        if(state[a] === "X" && state[a] === state[b] && state[b] === state[c]) {
           console.log("logic:", logic);
-          return true
+          setWinner("X")
+        } else if(state[a] === "0" && state[a] === state[b] && state[b] === state[c]) {
+          console.log("logic:", logic);
+          setWinner("0")
         }
-        
     }
     return false
   }
-  
+  console.log("winner:", winner);
 
-  const isWinner  = checkWinner()
+  useEffect(() => {
+    checkWinner();
+  }, [state]);
   return (
     
     <div>
-      {isWinner ? <>Someone Won</> :
+      {winner !== null ? <>{winner} Won</> :
       <>
       <div className="flex">
         <Square onClick={()=>{handleClick(0)}} value={state[0]}/>

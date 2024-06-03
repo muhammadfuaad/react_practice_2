@@ -10,6 +10,7 @@ import Form from './components/Form';
 import UseContext from './components/hooks/UseContext';
 import ContextApi from './components/hooks/ContextApi';
 import TicTacToe2 from './components/hooks/TicTacToe2';
+import Axios from './components/Axios';
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
         <Route path="/use_context" element={<UseContext />} />
         <Route path="/context_api" element={<ContextApi />} />
         <Route path="/tic_tac_toe_2" element={<TicTacToe2 />} />
+        <Route path="/axios" element={<Axios />} />
+
 
       </Routes>
     </Router>
