@@ -47,8 +47,9 @@ function TicTacToe2() {
   return (
     <div>
       {
-        winner !== null ? <>{winner} Won</> :
+        winner !== null ? "{winner} Won" :
         <>
+        {}
         <div className="flex">
           <Square onClick={()=>{handleClick(0)}} value={state[0]}/>
           <Square onClick={()=>{handleClick(1)}} value={state[1]}/>
