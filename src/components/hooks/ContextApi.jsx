@@ -31,7 +31,7 @@ function ChildB() {
   )
 }
 
-function ChildC(myName, myGender) {
+function ChildC() {
  
   return (
     <data1.Consumer>{(myGender) => {

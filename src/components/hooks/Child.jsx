@@ -4,7 +4,7 @@ function Child() {
     console.log("Child");
 
     return (
-      <></>
+      <>This is child component</>
     )
   }
   
