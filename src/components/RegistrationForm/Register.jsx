@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import axios from 'axios'
-
+import { useNavigate } from 'react-router-dom'
 function Register() {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
@@ -8,10 +8,15 @@ function Register() {
   console.log("name:", name);
   console.log("email:", email);
   console.log("password:", password);
-
+  const userData = {name, email, password}
+  const navigate = useNavigate()
   const handleSubmit = (e) => {
     e.preventDefault()
-    axios.post("http://127.0.0.1:3001/create", {name, email, password}).then((result)=>{console.log("result:", result);}).catch((error)=>{console.log("error:", error)})
+    axios.post("http://127.0.0.1:3000/register", userData).then((result)=>{
+      console.log("result:", result)
+      navigate("/login")
+    })
+    .catch((error)=>{console.log("error:", error)})
   }
   return (
     <>
