@@ -9,7 +9,7 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    axios.post("http://127.0.0.1:5000/login", {email, password}).then((result)=>{console.log("result:", result);}).catch((error)=>{console.log("error:", error)})
+    axios.post("http://127.0.0.1:3000/login", {email, password}).then((result)=>{console.log("result:", result);}).catch((error)=>{console.log("error:", error)})
   }
   return (
     <>
