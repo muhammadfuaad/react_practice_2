@@ -19,6 +19,7 @@ import AssignmentTask from '../AssignmentTask';
 import RegistrationForm from './components/CRUD/RegistrationForm';
 import Index from './components/CRUD/Index';
 import Login from './components/RegistrationForm/Login';
+import Counter2 from './components/ReduxToolkit/Counter';
 
 function App() {
   return (
@@ -48,6 +49,8 @@ function App() {
         <Route path="/assignment" element={<AssignmentTask />} />
         <Route path="/registration_form" element={<RegistrationForm />} />
         <Route path="/users" element={<Index />} />
+        <Route path="/redux_toolkit_counter" element={<Counter2 />} />
+
 
 
 
