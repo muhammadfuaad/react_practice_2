@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Calculator from './components/Calculator/Calculator';
@@ -20,6 +19,7 @@ import RegistrationForm from './components/CRUD/RegistrationForm';
 import Index from './components/CRUD/Index';
 import Login from './components/RegistrationForm/Login';
 import Counter2 from './components/ReduxToolkit/Counter';
+import Form2 from './components/Form2';
 
 function App() {
   return (
@@ -50,18 +50,7 @@ function App() {
         <Route path="/registration_form" element={<RegistrationForm />} />
         <Route path="/users" element={<Index />} />
         <Route path="/redux_toolkit_counter" element={<Counter2 />} />
-
-
-
-
-
-
-
-
-
-
-
-
+        <Route path="/form2" element={<Form2 />} />
       </Routes>
     </Router>
   );

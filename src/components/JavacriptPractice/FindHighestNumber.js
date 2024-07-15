@@ -10,7 +10,7 @@ function sortNumbers(arr) {
       highestNumber = arr[i];
     } 
     
-    debugger;
+    // debugger;
     
     console.log("highestNumber:", highestNumber);
     console.log("secondHighestNumber:", secondHighestNumber);

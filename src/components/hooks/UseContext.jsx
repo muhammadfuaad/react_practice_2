@@ -8,7 +8,7 @@ function FirstComponent() {
   const email = "fuaad29@gmail.com"
   return ( 
     <div>
-      <h1>This is 1st Componet</h1>
+      {/* <h1>This is 1st Componet</h1> */}
       <data.Provider value={name}>
         <data1.Provider value={email}>
           <SecondComponent />
@@ -21,7 +21,7 @@ function FirstComponent() {
 function SecondComponent() {
   return ( 
     <div>
-      <h1>This is 2nd Componet</h1>
+      {/* <h1>This is 2nd Componet</h1> */}
       <ThirdComponent />
     </div>
    );
