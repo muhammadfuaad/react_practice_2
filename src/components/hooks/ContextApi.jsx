@@ -50,5 +50,4 @@ function ChildC() {
   )
 }
   
-  export default ContextApi
-  
+export default ContextApi  

@@ -1,9 +1,9 @@
 // src/features/counter/Counter.js
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { increment, decrement, incrementByAmount } from './CounterSlice';
 
-const Counter = () => {
+const ReduxToolkitCounter = () => {
   const count = useSelector(state => state.counter.value);
   const dispatch = useDispatch();
   const [value, setValue] = useState(0)
@@ -23,7 +23,7 @@ const Counter = () => {
   );
 };
 
-export default Counter;
+export default ReduxToolkitCounter;
 
 // notes:
 // The typeof value changes to string when you add a number in the input because the value from an HTML input element 

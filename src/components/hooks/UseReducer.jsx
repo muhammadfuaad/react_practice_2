@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react';
+import { useReducer } from 'react';
 
 // Reducer function to handle state changes
 const reducer = (state, action) => {

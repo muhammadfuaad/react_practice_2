@@ -18,9 +18,10 @@ import AssignmentTask from '../AssignmentTask';
 import RegistrationForm from './components/CRUD/RegistrationForm';
 import Index from './components/CRUD/Index';
 import Login from './components/RegistrationForm/Login';
-import Counter2 from './components/ReduxToolkit/Counter';
+import Counter2 from './components/ReduxToolkit/ReduxToolkitCounter';
 import Form2 from './components/Form2';
 import ReduxCounter from './components/Redux/ReduxCounter';
+import ReduxToolkitCounter from './components/ReduxToolkit/ReduxToolkitCounter';
 
 function App() {
   return (
@@ -53,6 +54,8 @@ function App() {
         <Route path="/redux_toolkit_counter" element={<Counter2 />} />
         <Route path="/form2" element={<Form2 />} />
         <Route path="/redux_counter" element={<ReduxCounter />} />
+        <Route path="/redux_toolkit_counter" element={<ReduxToolkitCounter />} />
+
 
       </Routes>
     </Router>
